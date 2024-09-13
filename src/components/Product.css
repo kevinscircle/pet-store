@@ -1,0 +1,23 @@
+.product {
+    background-color: yellow;
+    color: rgb(128, 128, 94);
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid black;
+
+}
+
+
+.product img{
+    width: 280px;
+}
+
+.product .quantity-button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+
+}

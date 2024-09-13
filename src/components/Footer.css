@@ -1,0 +1,35 @@
+.footer {
+    color: purple;
+    background-color: teal;
+
+    text-align: center;
+    height: 150px;
+    padding-top: 10px;
+}
+
+
+.footer h2{
+    padding-top: 5px;
+    margin-bottom: 1px;
+    margin-left: 40px;
+
+}
+
+.footer-links {
+list-style: none;
+}
+
+
+.footer-links li {
+    display: inline-block;
+    text-align: center;
+    margin-right: 15px;
+    /* padding-bottom: 40px; */
+    /* margin-top: 15px; */
+
+}
+
+.footer .footer-links a {
+    color: white;
+    text-decoration: none;
+}
