@@ -1,16 +1,28 @@
 import Product from '../components/Product';
 import './Catalog.css';
+import { catalog as Products, categories } from '../services/DataService';
 
 
 function Catalog() {
+
+
     return ( 
-        <div className='catalog'>
-            <h1>Our amazing catalog</h1>
-            <Product title='1st toy' price='14.99'></Product>
-            <Product title='2nd toy' price='14.99'></Product>
-            <Product title='3rd toy' price='14.99'></Product>
-            <Product title='4rd toy' price='14.99'></Product>
-            <Product title='5th toy' price='14.99'></Product>
+        <div id='catalog' className='catalog'>
+            <h1>Our Amazing Catalog</h1>
+
+            <div className='filters'>
+              {categories.map(cat =><button className='btn btn-sm btn-outline-dark'>{cat}</button>)}   
+            </div>
+
+           
+
+
+            {Products.map(prod => <Product data={prod}></Product>)}
+            {/* <Product data={Products[0]}></Product> */}
+           
+
+            {/* <Product title='2nd toy' price='14.99'></Product> */}
+        
         </div>
      );
 }

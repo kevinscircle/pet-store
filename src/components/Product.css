@@ -1,23 +1,49 @@
 .product {
-    background-color: yellow;
-    color: rgb(128, 128, 94);
-    height: 400px;
+    background-color: rgb(6, 140, 140);
+    color: #e0883b;
+    height: 430px;
     width: 300px;
     display: inline-block;
     margin: 10px;
-    border: 1px solid black;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.1s;
+    user-select: none;
+    
+    /* color: black; */
 
 }
 
-
+.product:hover {
+    border: 2px solid rgb(112, 16, 208);
+    transform: scale(1.05);
+    
+}
+ .product:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
 .product img{
     width: 280px;
+    height: 280px;
 }
 
 .product .quantity-button{
 display: flex;
 flex-direction: row;
-justify-content: center;
-
+justify-content: space-around;
+margin-top: 6px;
 
 }
+
+
+
+
+
+ 
+  
+ 

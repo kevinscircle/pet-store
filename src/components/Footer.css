@@ -1,35 +1,92 @@
 .footer {
     color: purple;
     background-color: teal;
+    
 
-    text-align: center;
-    height: 150px;
+    /* text-align: center; */
+    height: 170px;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    
 }
 
-
-.footer h2{
-    padding-top: 5px;
-    margin-bottom: 1px;
-    margin-left: 40px;
-
+.footer .underline {
+    text-decoration: underline;
 }
 
 .footer-links {
 list-style: none;
 }
 
+.footer .bold {
+    font-weight: 700;
+}
 
-.footer-links li {
-    display: inline-block;
-    text-align: center;
-    margin-right: 15px;
-    /* padding-bottom: 40px; */
-    /* margin-top: 15px; */
+.footer .footer-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
 }
+
+.footer .flex-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 300px;
+
+}
+
 
 .footer .footer-links a {
     color: white;
     text-decoration: none;
+}
+
+.footer .flex-copyright div:last-of-type {
+    border-left: 3px solid black;
+    padding-left: 20px;
+    text-decoration: underline;
+}
+
+
+.footer .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+.footer .social-links i {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.footer .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+}
+
+.footer .footer-links a {
+    font-size: 30px;
+    font-weight: 700;
+    background-image: linear-gradient(to left, #e78533, #ccc);
+    color: transparent;
+    background-clip: text;
+}
+
+.footer .site-container{
+    width: 500px;
+    margin-left: 540px; 
+    /* how to center with flex above was fix */
+}
+
+.footer .footer-links a {
+
 }

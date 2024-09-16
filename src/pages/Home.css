@@ -1,0 +1,32 @@
+
+
+
+.home h2 {
+    text-align: center;
+    /* color: purple; */
+    font-size: 70px;
+    font-weight: 700;
+    /* // https://blog.logrocket.com/css-header-styles-cross-browser-compatibility/ */
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    /* -webkit-background-clip: text; */
+
+}
+
+.home .home-body{
+    min-height: 600px;
+    background-image: url("../../public/img/paw-background.jpg");   
+    /* background-repeat: no-repeat;
+    background-size: cover;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home .home-body img{
+    border-radius: 50%;
+    height: 500px;
+
+}

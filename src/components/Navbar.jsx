@@ -3,8 +3,8 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
+        <a className="navbar-brand logo" href="home.jsx">
+        <span>Pet</span>Store
         </a>
         <button
           className="navbar-toggler"
@@ -32,13 +32,18 @@ function Navbar() {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-warning" type="submit">
               Search
             </button>
           </form>
         </div>
       </div>
     </nav>
+
+    // <nav className="fixed-nav-bar">
+    //     <div className="logo"><span>Pet</span>Store</div>
+
+    // </nav>
   );
 }
 export default Navbar;
