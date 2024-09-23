@@ -22,10 +22,10 @@ function Footer() {
   // )
 
   return (
-    <div className="footer">
+    <div className="footer page">
       <div className="footer-flex">
         <div>
-          Powered by <span className="bold underline">Zillow</span>
+          The one <span className="bold underline">Pet Shop</span>
         </div>
         <div className="flex-copyright">
           <div>
@@ -38,9 +38,9 @@ function Footer() {
 
         <div className="social-links">
           {/* <FontAwesomeIcon icon="fa-brands fa-facebook-f"/> */}
-          <i className="fa-brands fa-facebook-f">f</i>
-          <i className="fa-brands fa-linkedin-in">l</i>
-          <i className="fa-brands fa-youtube">y</i>
+          <i className="fa-brands fa-facebook-f"></i>
+          <i className="fa-brands fa-linkedin-in"></i>
+          <i className="fa-brands fa-youtube"></i>
         </div>
       </div>
 

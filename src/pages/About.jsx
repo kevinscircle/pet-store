@@ -2,13 +2,13 @@ import "./About.css";
 
 function About() {
   return (
-    <div id="about" className="about">
-      <div class="card">
-        <div class="bg">
+    <div id="about" className="about page">
+      <div className="card">
+        <div className="bg">
           <p>About Me</p>
           <p>Kevin Reyes</p>
         </div>
-        <div class="blob"></div>
+        <div className="blob"></div>
       </div>
     </div>
   );

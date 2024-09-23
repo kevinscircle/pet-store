@@ -1,10 +1,20 @@
 .catalog {
     min-height: 600px;
-    background-color: rgb(184, 174, 174);
-    
+    background-color: rgb(206, 239, 237);
+    padding-bottom: 30px;
+
 }
 
+.catalog h1 {
+    font-size: 70px;
+    font-weight: 700;
+    font-stretch: expanded;
+    letter-spacing: 0.8px;
+    background-image: linear-gradient(to left, #f47003, #ccc);
+    color: transparent;
+    background-clip: text;
+}
 
 .catalog .filters button {
-margin: 6px 4px;
+    margin: 6px 4px;
 }

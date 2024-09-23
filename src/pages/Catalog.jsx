@@ -7,7 +7,7 @@ function Catalog() {
 
 
     return ( 
-        <div id='catalog' className='catalog'>
+        <div id='catalog' className='catalog page'>
             <h1>Our Amazing Catalog</h1>
 
             <div className='filters'>
@@ -22,6 +22,7 @@ function Catalog() {
            
 
             {/* <Product title='2nd toy' price='14.99'></Product> */}
+            
         
         </div>
      );

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./QuantityPicker.css";
 
-function QuantityPicker() {
+function QuantityPicker(props) {
   const [quantity, setQuantity] = useState(1); // inmutable  // variable, function 
 
   function handleIncrease() {
@@ -10,6 +10,8 @@ function QuantityPicker() {
     // console.log("increase");
 
     setQuantity(value);
+
+    props.onChange(value);  // call the parent function 
   }
 
   function handleDecrease() {
@@ -19,6 +21,8 @@ function QuantityPicker() {
     let value = quantity - 1;
 
     setQuantity(value);
+
+    props.onChange(value);  // call the parent function 
 
     // if (quantity <= 1) {
     //   setQuantity(1);
@@ -31,9 +35,15 @@ function QuantityPicker() {
     <div className="qt-picker">
       <button className="btn btn-sm btn-dark" disabled={quantity === 1} onClick={handleDecrease}>-</button>
       <span>{quantity}</span>
-      <button className="btn btn-sm btn-dark"  onClick={handleIncrease}>+</button>
+   
+      <button className="paw-btn" onClick={handleIncrease}>  <img className="paw-plus" src="../../img/paw-print.png"></img></button>
+    
     </div>
   );
 }
 
 export default QuantityPicker;
+
+
+
+
