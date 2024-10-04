@@ -3,7 +3,7 @@
 }
 
 
-.qt-picker button{
+.qt-picker button {
 
     margin: 2px 6px;
 }
@@ -13,9 +13,13 @@
     font-weight: bold;
 
 }
-.qt-picker .paw-btn{
+
+.qt-picker .paw-btn {
     border-radius: 50%;
     width: 45px;
+
+
+   
 }
 
 .qt-picker .paw-plus {
@@ -24,9 +28,6 @@
     background-color: white;
     border-radius: 50%;
     margin: 0 -6px;
- 
+
 
 }
-
-
-

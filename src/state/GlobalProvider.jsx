@@ -9,7 +9,17 @@ function GlobalProvider(props) {
   });
 
 
-function addProductToCart(){
+function addProductToCart(product){
+console.log('global add to cart',);
+
+// add product to cart (3 steps)
+// create copy 
+// modify 
+//send back 
+
+let copy = [...cart];
+copy.push(product);
+setCart(copy);
 
 }
 function removeProductFromCart(){

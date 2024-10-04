@@ -2,12 +2,13 @@
     min-height: 600px;
     background-color: rgb(206, 239, 237);
     padding-bottom: 30px;
+    text-align: center;
 
 }
 
 .catalog h1 {
     font-size: 70px;
-    font-weight: 700;
+    font-weight: 900;
     font-stretch: expanded;
     letter-spacing: 0.8px;
     background-image: linear-gradient(to left, #f47003, #ccc);
@@ -18,3 +19,26 @@
 .catalog .filters button {
     margin: 6px 4px;
 }
+
+
+.catalog .btn-filter{
+    background: #fbca1f;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 16px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+  }
+  
+  butt.btn-filteron:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  .btn-filter:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }

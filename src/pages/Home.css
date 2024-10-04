@@ -1,8 +1,19 @@
+.home {
+    display: flex;
+    flex-direction: column;
 
+}
+
+.home-title{
+    display: flex;
+    justify-content: center;
+}
 
 
 .home h2 {
     text-align: center;
+    border-bottom: 5px solid purple;
+    /* width: 1200px; */
     /* color: purple; */
     font-size: 70px;
     font-weight: 700;
@@ -10,7 +21,10 @@
     background-image: linear-gradient(to left, #553c9a, #b393d3);
     color: transparent;
     background-clip: text;
+
     /* -webkit-background-clip: text; */
+
+
 
 }
 
@@ -77,6 +91,7 @@
     margin: 40px;
     text-decoration: none;
     color: black;
+    text-align: center;
 
  
   }

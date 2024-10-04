@@ -24,9 +24,9 @@
     transform: scale(1.05);
     
 }
- .product:active {
+ /* .product:active {
     transform: scale(0.95) rotateZ(1.7deg);
-  }
+  } */
 .product img{
     width: 280px;
     height: 280px;

@@ -26,8 +26,8 @@ function Contact() {
 
   return (
     <div className="contact">
-      <div class="contact-form">
-        <span class="heading">Contact Us</span>
+      <div className="contact-form">
+        <span className="heading">Contact Us</span>
         <form>
           <label for="name">Name:</label>
           <input type="text" required="" onChange={handleContact} name="name" />

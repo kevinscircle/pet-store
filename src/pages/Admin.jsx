@@ -1,7 +1,11 @@
 import "./Admin.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import DataService from "../services/DataService";
 
 function Admin() {
+  const [allCoupons, setAllCoupons] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
+
   const [product, setProduct] = useState({
     title: "",
     image: "",
@@ -35,10 +39,23 @@ function Admin() {
     setProduct(copy);
   }
 
-  function addProduct() {
+  async function addProduct() {
     console.log("the product", product);
+    // fix price
+
+    let fixedProd = { ...product };
+    fixedProd.price = parseFloat(fixedProd.price);
+
+    let copy = [...allProducts];
+    copy.push(fixedProd);
+    setAllProducts(copy);
+
+    // send the prod to the server
+
+    let resp = DataService.saveProducts(fixedProd);
+    console.log("resp", resp);
   }
-//////coupon 
+  ///////////////////coupon
   const [coupon, setCoupon] = useState({
     code: "",
     discount: "",
@@ -59,7 +76,25 @@ function Admin() {
 
   function addCoupon() {
     console.log("the coupon", coupon);
+
+    let copy = [...allCoupons];
+    copy.push(coupon);
+    setAllCoupons(copy);
   }
+
+  // use Effect -> load data
+  // load data retrieves the products from the server
+  // and put the data into allProducts state var
+
+  async function loadData() {
+    let data = await DataService.getProducts();
+    setAllProducts(data);
+  }
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
   return (
     <div className="admin page">
       <h1>Store Administration</h1>
@@ -116,6 +151,14 @@ function Admin() {
               </button>
             </div>
           </div>
+
+          {allProducts.map((prod) => (
+            <li className="prod">
+              <img src={prod.image} alt="" />
+              <h5>{prod.title}</h5>
+              <label> ${prod.price}</label>
+            </li>
+          ))}
         </div>
 
         <div className="coupons">
@@ -127,6 +170,7 @@ function Admin() {
                   type="text"
                   required="required"
                   onChange={handleCoupon}
+                  name="code"
                 />
                 <span className="user">Code</span>
               </div>
@@ -136,6 +180,7 @@ function Admin() {
                   type="text"
                   required="required"
                   onChange={handleCoupon}
+                  name="discount"
                 />
                 <span>Discount</span>
               </div>
@@ -145,6 +190,12 @@ function Admin() {
               </button>
             </div>
           </div>
+
+          {allCoupons.map((cp) => (
+            <li>
+              {cp.code} - {cp.discount}%
+            </li>
+          ))}
         </div>
       </div>
     </div>

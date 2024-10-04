@@ -1,9 +1,6 @@
 .footer {
     color: purple;
     background-color: teal;
-    
-
-    /* text-align: center; */
     height: 170px;
     padding-top: 10px;
     display: flex;
@@ -87,6 +84,3 @@ list-style: none;
     /* how to center with flex above was fix */
 }
 
-.footer .footer-links a {
-
-}

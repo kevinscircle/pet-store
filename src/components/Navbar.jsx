@@ -3,16 +3,14 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import DataContext from "../state/DataContext";
 
-
 function Navbar() {
-
-const user = useContext(DataContext).user;
+  const { user, cart } = useContext(DataContext);
 
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <Link className="navbar-brand logo" to="/">
-        <span>Pet</span>Store
+          <span>Pet</span>Store
         </Link>
         <button
           className="navbar-toggler"
@@ -29,11 +27,15 @@ const user = useContext(DataContext).user;
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">
-                Home
+                <img src="../../img/dalmatian.png" /> Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/catalog">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/catalog"
+              >
                 Catalog
               </Link>
             </li>
@@ -48,16 +50,20 @@ const user = useContext(DataContext).user;
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/contact">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/contact"
+              >
                 Contact
               </Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
-
-            <label className="btn btn-outline-light">{user.name}</label>
-            <Link className="btn btn-outline-warning ms-2" to='/cart'>View Cart</Link>
-            
+            <label className="btn btn-outline-light btn-lg">{user.name}</label>
+            <Link className="btn btn-outline-warning ms-3 btn-lg cart-container" to="/cart">
+              <span className="position-absolute badge rounded-pill bg-info">{cart.length}</span> <img className="cart" src='./img/shopping-cart.png' alt=''></img>View Cart
+            </Link>
           </form>
         </div>
       </div>

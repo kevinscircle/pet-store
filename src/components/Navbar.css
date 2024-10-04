@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
 /* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); */
 
@@ -23,7 +22,7 @@
     font-family: "Raleway";
     min-height: 100px;
     box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
-  
+
 }
 
 .navbar .logo {
@@ -41,3 +40,25 @@
 }
 
 
+.navbar .nav-item {
+    display: flex;
+    align-items: center;
+ 
+}
+
+.navbar .cart-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+   
+}
+
+.navbar .cart {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 65px;
+
+
+}
